@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Responsive Header, Table & Form</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+        <a class="navbar-brand" href="#"><img src="assets/CyberadNation.png" alt="" style="width: 100px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+<h1 class="mt-5 text-center">List Of Staff</h1>
+<!-- <hr class="bg-primary"> -->
+
+<table class="table table-responsive-lg table-bordered table-striped table-hover">
+    <!-- table-striped table-hover -->
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Olayiwola</td>
+            <td>Mathematics lore</td>
+            <td><button class="btn btn-success">View</button></td>
+            <!-- <td>1</td>
+            <td>Olayiwola</td>
+            <td>Mathematics lore</td>
+            <td><button class="btn btn-success">View</button></td>
+            <td>1</td>
+            <td>Olayiwola</td>
+            <td>Mathematics lore</td>
+            <td><button class="btn btn-success">View</button></td> -->
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Femi</td>
+            <td>Agric</td>
+            <td><button class="btn btn-warning">View</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Aleje</td>
+            <td>F/Maths</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+    <h1 class="text-center">Contact Us</h1>
+
+    <form action="" method="post" class="col-md-7 mx-auto row mb-5">
+        <div class="form-group col-md-12">
+            <label for="name" class="font-weight-bold">Name</label>
+            <input type="text" placeholder="Name" class="form-control" id="name">
+        </div>
+        <div class="form-group col-md-12">
+            <label for="subject" class="font-weight-bold">Subject</label>
+            <input type="text" placeholder="Subject" class="form-control" id="name">
+        </div>
+        <div class="form-group col-md-12">
+            <label for="type" class="font-weight-bold">Work Type</label>
+            <select name="" id="type" class="custom-select">
+                <option selected disabled>Select Work Type</option>
+                <option>Full Time</option>
+                <option>Part Time</option>
+                <option>Contract</option>
+                <option>NYSC</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-info rounded-pill">Submit</button>
+    </form>
+
+    <footer class="p-3 text-center bg-light">
+        &copy; 2024 Bootstrap class
+    </footer>
+</body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</html>
