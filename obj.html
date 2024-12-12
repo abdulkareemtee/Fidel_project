@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <title>Object & Array</title>
+</head>
+<body>
+  <h1 id="box"></h1>
+  <h2 id="room"></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>S/N</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Class</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="content">
+
+    </tbody>
+  </table>
+  <script>
+    let obj = {
+      "name" : "Olayiwola",
+      "class" : "Jss 2",
+      "age" : 12
+    }
+    box.innerHTML = obj.class
+
+    let arr = ["akeem", "Ammar", "Abdullah"]
+    room.innerHTML = arr[2]
+
+    arrObj = [
+      {'name': 'akeem', 'age': '12', 'class' : 'jss 1'},
+      {'name': 'Abdullah', 'age': '14', 'class' : 'jss 4'},
+      {'name': 'Ammar', 'age': '16', 'class' : 'sss 1'},
+    ]
+
+    arrObj.forEach((element,i) => {
+      content.innerHTML += `
+        <tr>
+          <td>${1+i++}</td>  
+          <td>${element['name']}</td>  
+          <td>${element['age']}</td>  
+          <td>${element['class']}</td>  
+          <td><button class='btn btn-success'>View</button></td>  
+        </tr>
+      `
+    });
+  </script>
+</body>
+</html>

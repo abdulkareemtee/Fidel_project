@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <button class="d-block rounded-pill bg-success m-3"
+  
+  onclick=" 
+     birthday ('TUNDE', 35)
+    "> BIRTHDAY
+ </button>
+
+
+ <button onclick=" 
+  let answer = add(2, 3);
+  console.log(answer)
+     " class="d-block rounded-pill bg-danger m-3">ADDITION
+ </button>
+
+ <button onclick=" 
+   console.log(isEven(22))
+     " class="d-block rounded-pill bg-danger m-3">isEven
+ </button>
+
+
+
+ 
+
+<button onclick="console.log(isValidEmail('asjam5us@gmail.com'))" class="d-block rounded-pill bg-danger m-3">isValidEmail
+</button>
+
+ 
+</body>
+</html>
+<script>
+function birthday(username, age) {
+console.log(`Happy birthday ${username} you are ${age} years old Today`)
+
+}
+
+function add(x, y) {
+  // let result = x + y;
+  // return result;
+  return x + y;
+
+  //u can use only this instaed of the 2 lines above return x + y;
+  
+}
+// let answer = add(2, 3);
+function isEven (number) {
+  
+  if (number % 2 === 0) {
+    return true;
+  } else { return false;}
+
+}
+
+function isValidEmail(email){
+ if (email.includes("@")) {
+  return true; 
+ } else {
+  return false;
+ }
+}
+
+
+// function isValidEmail(email){
+
+//   return email.includes("@") ? true : false ;
+ 
+//  }
+
+
+
+
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fakestore API</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+  <center>
+    <img src="assets/loader.gif" alt="" width="150px" style="display: none;" id="loader">
+  </center>
+  <div id="content"  class="row"></div>
+
+
+
+  <script>
+try {
+  
+} catch (error) {
+  
+}
+    
+   async function Fetcher(params) {
+     loader.style.display = 'block'
+      const data = await fetch('https://fakestoreapi.com/products/');
+      const res = await data.json();
+      content.innerHTML = '';
+      res.forEach(elm => {
+        content.innerHTML += `
+        <div class="col-md-4 border mx-0 mt-3">
+           <h5 class='text-center mt-2'> ${elm['title']}</h5>
+           <div style="height: 300px; overflow: hidden">
+           <img src="${elm['image']}" class="w-100">
+           </div>
+           <div class='w-100 mt-3'>
+            <s  class='float-left d-block text-danger'>$${elm['price']}</s>
+            <b class='float-right d-block'>$${elm['price']}</b><br>
+            </div>
+
+            <center>
+              <button class='btn btn-success my-2 d-block' onclick="singleProduct(${elm['id']})">View</button>  
+            </center>
+        </div>
+        `
+      });
+      loader.style.display = 'none'
+
+      // console.log(data);
+      
+    }
+    Fetcher()
+    const singleProduct = async(id)=>{
+      loader.style.display = 'block'
+      const data = await fetch('https://fakestoreapi.com/products/'+id);
+      const res = await data.json();
+      console.log(res);
+      
+      content.innerHTML = `
+      <div class='col-md-6 mx-auto border border-success  rounded'>
+        <h1 class='text-success text-center'>${res['title']}</h1>
+
+        <img src='${res['image']}' class='card-img'>
+        <a href='#' class='text-capitalize'>${res['category']}</a>
+        <b class='float-right'>$${res['price']}</b>
+
+        <h4>Description</h4>
+        <hr>
+        <p>${res['description']}</p>
+
+        <center><button class='btn btn-danger' onclick='Fetcher()'>View All</button></center>
+      `
+      loader.style.display = 'none'
+
+    }
+  </script>
+</body>
+</html>

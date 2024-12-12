@@ -1,0 +1,49 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area and Age </title>
+</head>
+<body>
+  
+</body>
+</html>
+
+
+<script>
+function calculateArea(length, width) 
+{
+  return length * width;
+}
+
+
+let length = 4;
+let width = 11;
+let area = calculateArea(length, width);
+console.log("The area of the rectangle is: " + area);
+console.log(`The area of the rectangle is: ${area}`);
+
+</script> 
+
+<script>
+  // function calculateAge(yearofBirth, currentYear) 
+  function calculateAge(currentYear, yearofBirth)
+    {
+    return currentYear - yearofBirth;
+    // return yearofBirth - currentYear;
+  }
+   
+  let yearofBirth = 1949;
+  let currentYear = 2024;
+  // let age = calculateAge(yearofBirth, currentYear)
+  let age = calculateAge(currentYear , yearofBirth)
+
+  console.log("The age of this candidate is: " + age);
+  
+  </script>
+

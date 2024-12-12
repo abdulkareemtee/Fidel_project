@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Registration Form</title>
+  <!-- Bootstrap 4.6 CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Optional custom styles -->
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+    <div class="container form-container">
+
+  
+    <h2 class="text-center">School Registration Form</h2> 
+  
+    <form id="registrationForm">
+      <!-- Student Name -->
+      <div class="form-control">
+        <label for="studentName"  class="p-1 text-right" >Student Name:</label>
+        <input class="c p-1" type="text" class="form-control " id="studentName" placeholder="Enter Student Name" required>
+        <div class="invalid-feedback">Please provide a valid name.</div>
+      </div>
+      
+      <!-- Age -->
+      <div class="form-group">
+        <label class=" p-1 col-4  text-right border border-dark" for="Age">Age:</label>
+        <input class=" p-1 col-6" type="number" class="form-control" id="age" placeholder="Enter Age" required>
+        <div class="invalid-feedback">Age is required and must be a valid number.</div>
+      </div>
+
+      <!--Email Address -->
+      <div class="form-group">
+        <label class=" p-1 col-4  text-right border border-dark" for="emailaddress">Email Address:</label>
+        <input class=" p-1 col-6" type="text" class="form-control" id="emailaddress" placeholder= "Enter Mail Address" required>
+      <div class="invalid-feedback">Email is required and must be a valid number.</div>
+      </div><!--Email- Address-->
+
+      <div class="form-group">
+        <label class="p-1 col-4  text-right border border-dark" for="Telephone">Telephone:</label>
+        <input class="p-1 col-6" type="number" class="form-control" id="Telephone" placeholder="Enter Telephone" required>
+        <div class="invalid-feedback">Age is required and must be a valid number.</div>
+      </div>
+
+      
+      <!-- Grade -->
+      <div class="form-group">
+        <label class="col-4 text-right border p-1" for="grade">Grade:</label>
+        <select class="col-6 p-1" class="form-control" id="grade" required>
+          <option value="">Select Grade</option>
+          <option value="1">Grade 1</option>
+          <option value="2">Grade 2</option>
+          <option value="3">Grade 3</option>
+          <option value="4">Grade 4</option>
+          <option value="5">Grade 5</option>
+        </select>
+        <div class="invalid-feedback">Please select a grade.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+        <div class="invalid-feedback">Please provide a valid email.</div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap 4.6 JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for Form Validation -->
+  <script>
+    // Form validation function
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission for validation
+
+      var form = this;
+      var isValid = true;
+
+      // Validate Student Name
+      var studentName = document.getElementById('studentName');
+      if (studentName.value.trim() === '') {
+        studentName.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        studentName.classList.remove('is-invalid');
+      }
+
+      // Validate Age
+      var age = document.getElementById('age');
+      if (age.value.trim() === '' || age.value <= 0) {
+        age.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        age.classList.remove('is-invalid');
+      }
+
+      // Validate Gender
+      var gender = document.querySelector('input[name="gender"]:checked');
+      if (!gender) {
+        document.querySelectorAll('input[name="gender"]').forEach(input => input.classList.add('is-invalid'));
+        isValid = false;
+      } else {
+        document.querySelectorAll('input[name="gender"]').forEach(input => input.classList.remove('is-invalid'));
+      }
+
+      // Validate Grade
+      var grade = document.getElementById('grade');
+      if (grade.value === '') {
+        grade.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        grade.classList.remove('is-invalid');
+      }
+
+      // Validate Email
+      var email = document.getElementById('email');
+      if (!email.validity.valid) {
+        email.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        email.classList.remove('is-invalid');
+      }
+
+      // If the form is valid, alert success (you can replace this with actual form submission)
+      if (isValid) {
+        alert('Form submitted successfully!');
+      }
+    });
+  </script>
+
+</body>
+</html>

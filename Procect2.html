@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+       <div class="col-6 mx-auto m-3">
+        <form type="form" class="form">
+          <h2 class="text-center">Registration Form</h2>
+      <div class="form-group m-1">
+        <label style="padding-left:30px;" class="form-control" for="username">Name: <input style="border:none;outline:none;" type="text" id="name" placeholder="Enter Name" size="50" /></label>
+        <span style="color:red; margin-left: 100px;" id="name_error"></span>
+     
+    </div>
+
+    <div class="form-group m-0">
+      <label class="form-control" for="password">Password: <input style="border:none;outline:none" type="password" id="password" placeholder="Enter Password" size="70" /></label>
+      <span style="color:red; margin-left: 100px;" id="pass_error"></span>
+   
+  </div>
+
+  <div class="form-group m-0">
+    <label style="padding-left:39px;" class="form-control" for="password">Email: <input style="border:none;outline:none" type="text" id="email" placeholder="Enter Email" size="70" /></label>
+    <span style="color:red; margin-left: 100px;" id="email_error"></span>
+ 
+</div>
+<div class="form-group m-0">
+  <label style="padding-left:30px;" class="form-control" for="Grade"> Class: 
+    <select  style="border:none; outline:none" class="col-6 p-1 ml-2" class="form-control" id="grade" required>
+      <option value="">Select Grade</option>
+      <option value="1">Grade 1</option>
+      <option value="2">Grade 2</option>
+      <option value="3">Grade 3</option>
+      <option value="4">Grade 4</option>
+      <option value="5">Grade 5</option>
+    </select>
+ </label>
+
+  
+  <span style="color:red; margin-left: 100px;" id="name_error">0</span>
+
+</div>
+
+
+<button type="submit" id="btn" style="outline:none;border:none;padding:10px 25px;"  class="rounded-pill d-block text-light bg-success mx-auto">Submit</button>
+
+</form>
+
+  </div>
+
+<script src="js/script.js"></script>
+  <!-- <script src="Project.js"> -->
+
+
+
+  </script>
+</body>
+</html>

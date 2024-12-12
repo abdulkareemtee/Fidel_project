@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="">
+  <button onclick="
+     subscribe ()
+   
+    // const buttonElement = document.querySelector('.one');
+
+    // // if (buttonElement.innerHTML=== 'Subcribe-One') 
+    
+    // if (buttonElement.innerText === 'Subcribe-One') 
+    // {
+    //   buttonElement.innerHTML = 'SUBSCRIBED-ALREADY'
+    // }
+    // else {
+    //   buttonElement.innerHTML = 'Subcribe-One'
+    // }
+    
+  " class="one d-block  m-3 rounded-pill p-2">Subcribe-One</button> 
+
+<button class="two m-3 rounded-pill p-2" onclick=" 
+
+subscriber ()">Subscribe-two</button>
+
+
+<button onclick=" 
+ subscribers ()"
+
+
+
+class="three d-block m-3 rounded-pill p-2">Subcribe-Three</button>
+</div>
+
+</body>
+
+<script>
+
+  function subscribe () {
+
+    const buttonElement = document.querySelector('.one');
+
+    
+    if (buttonElement.innerText === 'Subcribe-One') 
+    {
+      buttonElement.innerHTML = 'SUBSCRIBED-ALREADY'
+    }
+    else {
+      buttonElement.innerHTML = 'Subcribe-One'
+    }
+    
+  }
+  
+  function subscriber () {
+  const buttonElement = document.querySelector('.two');
+      
+    if (buttonElement.innerText === 'Subscribe-two') 
+    {
+      buttonElement.innerHTML = 'SUBSCRIBED-ALREADY'
+    }
+    else {
+      buttonElement.innerHTML = 'Subscribe-two'
+    }
+    
+  }
+
+  function subscribers () {
+  const buttonElement = document.querySelector('.three');
+      
+    if (buttonElement.innerText === 'Subscribe-three') 
+    {
+      buttonElement.innerHTML = 'SUBSCRIBED-ALREADY'
+    }
+    else {
+      buttonElement.innerHTML = 'Subscribe-three'
+    }
+  }
+
+</script>
+</html>
+
+
